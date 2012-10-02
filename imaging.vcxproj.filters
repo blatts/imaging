@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{af12aaac-86ed-42f1-ade7-cf243437782a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{c7b9d550-b77d-4e61-a715-4149c5d005df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="andor_error_codes.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="camera_worker.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file_sorter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="image_window.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="andor_error_codes.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="camera.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="camera_control.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="camera_worker.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="file_sorter.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="gui_ids.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="image_window.hh">
+      <Filter>Headers</Filter>
+    </None>
+    <None Include="ChangeLog" />
+  </ItemGroup>
+</Project>
