@@ -1,0 +1,36 @@
+2010-03-03  Sebastian Blatt  <sblatt@havens.de>
+
+	* main.cc (SRIMainFrame::SRIMainFrame): Resized image window.
+
+	* image_window.cc: Fixed numerical display on gradient bar.
+
+	* camera_worker.cc: Updated definition of experimental run. Starts
+	whenever save_images is set to true or defaults to start of
+	experiment if checkbox was already marked.
+
+2010-02-26  Sebastian Blatt  <sblatt@havens.de>
+
+	* image_window.cc: Added palette on screen display.
+
+	* image_window.hh: Redid autoscale vs manual scale interface.
+
+	* camera.cc: Added Preamp gain setting (set to maximum
+	automatically).
+
+2010-02-01  Sebastian Blatt  <sblatt@havens.de>
+
+	* camera.cc: Now including Andor headers from Andor Solis
+	installation directory instead of forming local copy. This will
+	simplify  updating the Andor camera software.
+
+	* image_window.cc (wxFrame): Updated palette to interpolate
+	through cyan from blue to green.
+
+	* main.cc: Internal Trigger? defaults to false now. Kinetics mode?
+	defaults to true.
+
+	* camera.cc: Switched to SaveAsTiffEx since SaveAsTiff autoscales
+	16 bit data to [min,max] in picture.
+
+	* main.cc: Bumped version.
+
