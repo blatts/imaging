@@ -12,9 +12,9 @@ a region of interest and displays the images in a false color map.
 
 The program uses wxWidgets for the GUI. Separate threads allow the
 image taking and sorting to be pretty fast (duty cycles of down to
-1-2s are possible).
+1-2s at 1024^2 pixel are possible).
 
 For details and why the program needs to be fast, see my PhD thesis,
 available at
 
-  http://jila.colorado.edu/yelabs/theses.html
+  http://jila.colorado.edu/yelabs/pubs/theses.html

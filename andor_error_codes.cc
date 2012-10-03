@@ -1,9 +1,9 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2010-01-21 13:24:16 srgang"
+// Time-stamp: "2012-10-02 22:39:17 sb"
 
 /*
   file       andor_error_codes.cc
-  copyright  (c) Sebastian Blatt 2010
+  copyright  (c) Sebastian Blatt 2010, 2011, 2012
 
 */
 
@@ -204,7 +204,7 @@ static const unsigned int andor_error_codes[] = {
   };
 
 const char* andor_strerr(unsigned int code){
-  static const int n = sizeof(andor_error_codes)/sizeof(unsigned int);
+  static const size_t n = sizeof(andor_error_codes)/sizeof(unsigned int);
   for(size_t i=0; i<n; ++i){
     if(andor_error_codes[i] == code){
       return andor_error_strings[i];
