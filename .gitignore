@@ -29,3 +29,8 @@ _ReSharper*/
 *.[Pp]ublish.xml
 *.resharper
 UpgradeLog.XML
+*.opensdf
+*.sdf
+
+vc_mswd/imaging
+vc_mswd/imaging.exe

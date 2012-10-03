@@ -1,3 +1,13 @@
+2012-10-03  Sebastian Blatt  <blatts@gmail.com>
+
+	* image_window.cc: Backported changes from image_window project to
+	make ImageWindow class more useful.
+
+2012-10-02  Sebastian Blatt  <blatts@gmail.com>
+
+	* Committed to git. Added .gitignore and tracking only a minimal
+	set of visual studio files.
+
 2010-03-03  Sebastian Blatt  <sblatt@havens.de>
 
 	* main.cc (SRIMainFrame::SRIMainFrame): Resized image window.

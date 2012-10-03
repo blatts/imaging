@@ -1,5 +1,5 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2012-10-02 15:09:15 sb"
+// Time-stamp: "2012-10-03 10:52:20 sb"
 
 /*
   file       main.cc
@@ -37,7 +37,7 @@
 
 #define FILE_SORTER_TARGET_DIRECTORY "z:\\Sr3\\data"
 
-#define IMAGE_FRAME_X_POSITION  0
+#define IMAGE_FRAME_X_POSITION  480
 #define IMAGE_FRAME_Y_POSITION  0
 #define IMAGE_FRAME_WIDTH       1033
 #define IMAGE_FRAME_HEIGHT      1050

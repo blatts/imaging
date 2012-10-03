@@ -1,5 +1,5 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2012-10-02 15:05:33 sb"
+// Time-stamp: "2012-10-03 13:17:49 sb"
 
 /*
   file       camera.cc
@@ -478,7 +478,6 @@ bool Camera::AbortExperiment() {
   }
   if(t != DRV_IDLE){
     if((rc=::AbortAcquisition())!=DRV_SUCCESS){
-      std::ostringstream os;
       os << "AbortAcquisition()";
       goto error;
     }

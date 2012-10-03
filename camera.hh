@@ -1,5 +1,5 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2012-10-02 14:16:52 sb"
+// Time-stamp: "2012-10-03 10:55:36 sb"
 
 /*
   file       camera.hh
@@ -52,7 +52,7 @@ class Camera{
     int GetStatus();
     bool DownloadImage(long** raw_image_data);
     bool SaveLastImageTIFF(const std::string& path);
-    bool SaveImageTIFF(const std::string& path, long** raw_image_data);
+    //bool SaveImageTIFF(const std::string& path, long** raw_image_data);
 
     bool AbortExperiment();
     void Shutdown();
