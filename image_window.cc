@@ -1,5 +1,5 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2012-10-03 15:04:56 sb"
+// Time-stamp: "2012-10-03 15:30:26 sb"
 
 /*
   file       image_window.cc
@@ -551,7 +551,9 @@ bool ImageFrame::process_raw_data(){
 
   // For displaying a regular image, just copy the data over
   if(!kinetics){
-    std::copy(*raw_image_data,(*raw_image_data)+area,processed_data);
+    //std::copy(*raw_image_data, (*raw_image_data)+area, processed_data);
+    std::transform(*raw_image_data, (*raw_image_data)+area,
+                   processed_data, StaticCaster<long, float>());
   }
   // For kinetics mode, need to calculate optical density. Put
   // calculated OD image into _beginning_ of processed_data.
@@ -718,7 +720,8 @@ ImageFrame::ImageFrame(wxFrame* parent, const wxString& title,
   SetBackgroundColour(*wxBLACK);
   //wxLogMessage(wxT("Create ImageFrame(%d,%d)"),width,height);
   img_panel = new ImagePanel(this,wxNewId(),wxDefaultPosition,
-                             wxSize((size_t)(3.0/4.0*width),height));
+                             wxSize(data_panels.size() == 0 ? width : (size_t)(3.0/4.0*width),
+                                    height));
 
   for(size_t i=0; i<data_panels.size(); ++i){
     data_panels[i] = new DataPanel(this,wxNewId(),wxDefaultPosition,wxDefaultSize);
@@ -929,7 +932,7 @@ void ImageFrame::OnCaretDone(wxCommandEvent&){
 void ImageFrame::OnResize(wxSizeEvent&){
   const wxSize& s = GetClientSize();
   size_t w = s.GetWidth(), h = s.GetHeight();
-  size_t wimg = (size_t)(3.0/4.0*w);
+  size_t wimg = (data_panels.size() == 0) ? w : (size_t)(3.0/4.0*w);
   if(wimg != img_panel->GetDisplayWidth() || h != img_panel->GetDisplayHeight()){
     //wxLogMessage(wxT("ImageFrame::OnResize display_size %d x %d"),wimg,h);
     img_panel->SetSize(0,0,wimg,h);

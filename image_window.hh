@@ -1,9 +1,9 @@
 // -*- mode: C++/lah -*-
-// Time-stamp: "2010-04-02 12:51:27 srgang"
+// Time-stamp: "2012-10-03 15:25:19 sb"
 
 /*
   file       image_window.hh
-  copyright  (c) Sebastian Blatt 2010
+  copyright  (c) Sebastian Blatt 2010, 2011, 2012
 
  */
 
@@ -13,6 +13,14 @@
 
 #include <wx/wx.h>
 #include <vector>
+
+template <typename From, typename To>
+struct StaticCaster {
+    To operator()(const From& x) const {
+      return static_cast<To>(x);
+    }
+};
+
 
 // Helper functions to interpolate floating point data into RGB values
 // using a palette.
